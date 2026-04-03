@@ -30,6 +30,7 @@ import messageRouter from './routes/messageApi.js';
 import libraryRouter from './routes/libraryApi.js';
 import gamesRouter from './routes/gamesApi.js';
 import searchRouter from './routes/searchAPI.js';
+import storageRouter from './routes/storageApi.js';
 
 // --- Root Route ---
 app.get('/', (req, res) => {
@@ -61,6 +62,7 @@ app.use('/api/messages', messageRouter);
 app.use('/api/library', libraryRouter);
 app.use('/api/games', gamesRouter);
 app.use('/api/search', searchRouter);
+app.use('/api/storage', storageRouter);
 
 // --- Production Handling ---
 if (process.env.NODE_ENV === "production") {
